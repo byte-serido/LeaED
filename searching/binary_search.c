@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 int binary_search(int array[], int higher, int lower,int num);
-void sort(int array[], int size);
+void sortcres(int array[], int size);
+void sortdecres(int array[],int size);
 
 int main(){
     int size;
@@ -17,8 +18,8 @@ int main(){
         scanf("%d",&array[i]);
     }
 
-    sort(array,size);
-    
+    sortcres(array,size);
+
     printf("\nNow input the number that you want to find: ");
     scanf("%d",&search);
 
@@ -55,10 +56,22 @@ o mais baixo(inicialmente definido como zero), o tamanho da array e o numero bus
     return -1;
 }
 
-void sort(int list[], int size){ //A função recebe a lista e seu tamanho, para deixar a array em ordem crescente
+void sortcres(int list[], int size){ //A função recebe a lista e seu tamanho, para deixar a array em ordem crescente
     for (int i = 0; i < size - 1; i++){
         for (int j = 0; j < size - 1; j++){
             if (list[j] > list[j + 1]){
+            int save = list[j];
+            list[j] = list[j + 1];
+            list[j + 1] = save;
+            }
+        }
+    }
+}
+
+void sortdesc(int list[],int tam){
+    for (int i = 0; i < tam - 1; i++){
+        for (int j = 0; j < tam - 1; j++){
+            if (list[j] < list[j + 1]){
             int save = list[j];
             list[j] = list[j + 1];
             list[j + 1] = save;
