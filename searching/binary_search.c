@@ -68,9 +68,9 @@ void sortcres(int list[], int size){ //A função recebe a lista e seu tamanho, 
     }
 }
 
-void sortdesc(int list[],int tam){
-    for (int i = 0; i < tam - 1; i++){
-        for (int j = 0; j < tam - 1; j++){
+void sortdesc(int list[],int size){
+    for (int i = 0; i < size - 1; i++){
+        for (int j = 0; j < size - 1; j++){
             if (list[j] < list[j + 1]){
             int save = list[j];
             list[j] = list[j + 1];
