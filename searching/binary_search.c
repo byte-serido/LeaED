@@ -18,7 +18,7 @@ int main(){
         scanf("%d",&array[i]);
     }
 
-    sortcres(array,size);
+    sortdecres(array,size);
 
     printf("\nNow input the number that you want to find: ");
     scanf("%d",&search);
@@ -68,7 +68,7 @@ void sortcres(int list[], int size){ //A função recebe a lista e seu tamanho, 
     }
 }
 
-void sortdesc(int list[],int size){
+void sortdecres(int list[],int size){
     for (int i = 0; i < size - 1; i++){
         for (int j = 0; j < size - 1; j++){
             if (list[j] < list[j + 1]){
